@@ -25,15 +25,23 @@
 
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/barbus.css') }}">
+
+    {#  Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    
     
     </head>
     <body>
         <header class="header" >
+            <div class="header--title" >
+                <a class="{# navbar-brand #}" href="{{ path('home') }}">Team Barbu's</a>
+            </div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
             <div class="navbar--logo" >
-                <img class="logo__image" src="{{ asset('assets/images/logo-barbus.jpg')}} " alt="logo barbus">
-                <a class="navbar-brand" href="{{ path('home') }}">Team Barbu's</a>
+                <img class="logo__image" src="{{ asset('assets/images/logo-barbus-removebg.png')}} " alt="logo barbus">
             </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
