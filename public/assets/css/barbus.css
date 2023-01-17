@@ -10,18 +10,40 @@
     padding-left: 20%;
     text-decoration: none;
 }
-.header--title:hover {
+.header--title-a:hover {
     color: #910B0B;
+    text-decoration: none;
 }
 
 .logo__image {
-    margin-right: 0.5rem;
-    width: 5rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: 6rem;
 }
 
 .nav-link {
     color: #000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
 }
 .nav-link:hover {
     color: #910B0B;
+    text-decoration: none;
 }
+ .nav-item {
+    padding-left: 1.5rem;
+ }
+
+.dropdown-item {
+    font-family: 'Iceland', cursive;
+}
+
+.navbar-toggler {
+    border-color: #000;
+    border-width: 2.5px;
+}
+
+/* .navbar-toggler-icon {
+    color: #000;
+} */

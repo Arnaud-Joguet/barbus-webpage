@@ -27,52 +27,64 @@
     <link rel="stylesheet" href="{{ asset('assets/css/barbus.css') }}">
 
     {#  Fonts #}
+    {# Rubik Dirt #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+    {# Iceland #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     
     
     </head>
     <body>
         <header class="header" >
             <div class="header--title" >
-                <a class="{# navbar-brand #}" href="{{ path('home') }}">Team Barbu's</a>
+                <a class="header--title-a" href="{{ path('home') }}">Team Barbu's</a>
             </div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <div class="navbar--logo" >
-                <img class="logo__image" src="{{ asset('assets/images/logo-barbus-removebg.png')}} " alt="logo barbus">
-            </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ path('home') }}">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">L'équipe</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Le blog</a>
-                    </li>
-                    
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        La boutique des Barbu's
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>
-                </ul>
+                <div class="container-fluid">
+                    <div class="navbar--logo" >
+                        <img class="logo__image" src="{{ asset('assets/images/logo-barbus-removebg.png')}} " alt="logo barbus">
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ path('home') }}">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">L'équipe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Le blog</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                La boutique des Barbu's
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Maillot de match</a></li>
+                                    <li><a class="dropdown-item" href="#">Casquette</a></li>
+                                    <li><a class="dropdown-item" href="#">Short</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </nav>
         </header>
+
         {% block body %}{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
     </body>
 </html>
