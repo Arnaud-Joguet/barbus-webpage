@@ -1,0 +1,72 @@
+/* header */
+
+.header {
+    background-color: #dada37;
+}
+
+.header--title > a{
+    font-family: 'Rubik Dirt', cursive;
+    color: #000;
+    font-size: 5rem;
+    padding-left: 20%;
+    text-decoration: none;
+}
+.header--title-a:hover {
+    color: #910B0B;
+    text-decoration: none;
+}
+
+.logo__image {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: 6rem;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
+}
+.nav-link:hover {
+    color: #910B0B;
+    text-decoration: none;
+}
+ .nav-item {
+    padding-left: 1.5rem;
+ }
+
+.dropdown-item {
+    font-family: 'Iceland', cursive;
+}
+
+.navbar-toggler {
+    border-color: #000;
+    border-width: 2.5px;
+}
+
+/* Homepage */
+
+.banner1_img {
+    width: 100%;
+}
+
+.hompage-firstSection-title {
+    font-family: 'Iceland';
+    font-size: 8rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    margin: 2rem;
+}
+
+/* media queries */
+
+@media (max-width: 836px) {
+    .hompage-firstSection-title {
+        font-size: 3rem;
+    }
+    .header--title > a{
+        font-size: 3rem;
+    }
+}
