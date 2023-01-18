@@ -1,4 +1,5 @@
 /* header */
+
 .header {
     background-color: #dada37;
 }
@@ -44,6 +45,28 @@
     border-width: 2.5px;
 }
 
-/* .navbar-toggler-icon {
-    color: #000;
-} */
+/* Homepage */
+
+.banner1_img {
+    width: 100%;
+}
+
+.hompage-firstSection-title {
+    font-family: 'Iceland';
+    font-size: 8rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    margin: 2rem;
+}
+
+/* media queries */
+
+@media (max-width: 836px) {
+    .hompage-firstSection-title {
+        font-size: 3rem;
+    }
+    .header--title > a{
+        font-size: 3rem;
+    }
+}
