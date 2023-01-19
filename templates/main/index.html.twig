@@ -1,27 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{# <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 Iceland; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Barbus/barbus-webpage/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Barbus/barbus-webpage/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
-    </ul>
-</div> #}
 
 <div class="banner1" >
     <img class="banner1_img" src="{{asset('assets/images/banniere1.jpg')}} " alt="photo équipe tournoi glace 2022" >
 </div>
 
 <section class="hompage-firstSection">
+
     <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
+    <h2 class="hompage-firstSection-subtitle">Dernières Actualitées :</h2>
+
+    <div class="card mb-3 homePageLastPost">
+        <img src="{{lastPost.0.firstPicture}}" class="card-img-top" alt="{{lastPost.0.title}} ">
+        <div class="card-body">
+            <h5 class="card-title homePageLastPost-title"> {{lastPost.0.title}} </h5>
+            <p class="card-text"> {{lastPost.0.summary}} </p>
+        </div>
+    </div>
+
 </section>
+
+<div class="banner2" >
+    <img class="banner1_img" src="{{asset('assets/images/banniere1.jpg')}} " alt="photo équipe tournoi glace 2022" >
+</div>
 
 {% endblock %}
