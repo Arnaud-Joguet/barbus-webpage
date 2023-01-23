@@ -14,7 +14,10 @@ class MainController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(PostRepository $postRepository): Response
     {
-        $lastPost = $postRepository->getLastpost();
+        
+        $postlist = $postRepository->findAll();
+        $lastPost = end($postlist);
+
         //dump($lastPost);
         return $this->render('main/index.html.twig', [
             'lastPost' => $lastPost,

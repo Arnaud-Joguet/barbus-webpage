@@ -39,25 +39,6 @@ class PostRepository extends ServiceEntityRepository
         }
     }
 
-    public function getLastpost($limit = 1) {
-        /*
-        SELECT *
-        FROM `post`
-        ORDER BY `id`
-        LIMIT 1
-        */
-        $em = $this->getEntityManager();
-
-        $query = $em->createQuery(
-            "SELECT p
-            FROM App\Entity\post p
-            ORDER BY p.id
-            "
-        );
-
-        return $query->getResult();
-    }
-
 //    /**
 //     * @return Post[] Returns an array of Post objects
 //     */
