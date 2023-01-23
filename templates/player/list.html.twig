@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team Barbu's, les joueurs{% endblock %}
+
+{% block body %}
+<section class="playerList ">
+    <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
+    <h2 class="hompage-firstSection-subtitle">Les Joueurs</h2>
+
+    {% for player in playerList %}
+    <div class="postList-card card mb-3" style="max-width: 75%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+            <img src="{{player.picture }}" class="img-fluid rounded-start" alt="{{player.name}} {{player.firstName}}">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{player.nickName}} </h5>
+                {# <p class="card-text">{{post.summary}} </p> #}
+                <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir l'article</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    No post have been found.
+    {% endfor %}
+
+</section>
+{% endblock %}
