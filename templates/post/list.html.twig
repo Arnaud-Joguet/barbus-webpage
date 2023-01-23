@@ -3,7 +3,7 @@
 {% block title %}Team Barbu's, le blog{% endblock %}
 
 {% block body %}
-<section class="postList">
+<section class="postList ">
     <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
     <h2 class="hompage-firstSection-subtitle">Toutes nos infos</h2>
 
@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{post.title}} </h5>
                 <p class="card-text">{{post.summary}} </p>
-                <a href="#" class="btn btn-warning">Voir l'article</a>
+                <a href=" {{path('post_show' , {'id': post.id})}} " class="btn btn-warning">Voir l'article</a>
             </div>
             </div>
         </div>
