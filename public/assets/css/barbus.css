@@ -82,6 +82,15 @@ body {
     font-size: 3rem;
 }
 
+/* postList */
+.postList {
+    margin-top: 2rem;
+}
+.postList-card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* media queries */
 
 @media (max-width: 836px) {

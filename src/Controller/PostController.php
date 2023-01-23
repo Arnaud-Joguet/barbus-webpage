@@ -13,13 +13,6 @@ class PostController extends AbstractController
     public function list(PostRepository $postRepository): Response
     {
 
-        /* $moviesList = $movieRepository->findAll();
-        $genresList = $genreRepository->findAll();
-        // on fait le rendu du template et on lui envoi la liste des films
-        return $this->render('front/movie/list.html.twig', [
-            'moviesList' => $moviesList,
-            'genresList' => $genresList,
-        ]); */
 
         $postList = $postRepository->findAll();
 

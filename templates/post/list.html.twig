@@ -3,5 +3,28 @@
 {% block title %}Team Barbu's, le blog{% endblock %}
 
 {% block body %}
-liste des post
+<section class="postList">
+    <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
+    <h2 class="hompage-firstSection-subtitle">Toutes nos infos</h2>
+
+    {% for post in postList|reverse %}
+    <div class="postList-card card mb-3" style="max-width: 75%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+            <img src="{{post.firstPicture }}" class="img-fluid rounded-start" alt="{{post.title}}">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}} </h5>
+                <p class="card-text">{{post.summary}} </p>
+                <a href="#" class="btn btn-warning">Voir l'article</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    No post have been found.
+    {% endfor %}
+
+</section>
 {% endblock %}
