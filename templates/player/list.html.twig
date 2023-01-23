@@ -15,9 +15,13 @@
             <div class="card">
                 <img src="{{player.picture }}" class="card-img-top" alt="{{player.name}} {{player.firstName}}">
                 <div class="card-body">
-                    <h5 class="card-title">{{player.nickName}} </h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir l'article</a>
+                    <h5 class="card-title player-title">#{{player.jerseyNumber}} {{player.nickName}} </h5>
+                    <ul class="card-text player-ul" >
+                        <li>Nom : {{player.name}}</li>
+                        <li>Prénom : {{player.firstName}}</li>  
+                        <li>Coté de crosse : {{player.stickSide}}</li>
+                    </ul>
+                    <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir le joueur</a>
                 </div>
             </div>
         </div>

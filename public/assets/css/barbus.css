@@ -91,6 +91,26 @@ body {
     margin-right: auto;
 }
 
+.player-title {
+    font-family: 'Iceland';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.player-ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.player-ul li {
+    padding-left: 2rem;
+    background-image: url("../images/icons8-ice-hockey-60.png");
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+}
+
 /* media queries */
 
 @media (max-width: 836px) {
