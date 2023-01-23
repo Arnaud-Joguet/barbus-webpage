@@ -15,7 +15,7 @@ class MainController extends AbstractController
     public function index(PostRepository $postRepository): Response
     {
         $lastPost = $postRepository->getLastpost();
-        //dump($lastPost);
+        dump($lastPost);
         return $this->render('main/index.html.twig', [
             'lastPost' => $lastPost,
         ]);
