@@ -16,7 +16,7 @@
         <div class="card-body">
             <h5 class="card-title homePageLastPost-title"> {{lastPost.title}} </h5>
             <p class="card-text"> {{lastPost.summary}} </p>
-        <a href="{# {{ path('film_read', {'slug': movie.slug}) }} #}" class="fs-1 mt-3 text-secondary align-self-start">
+        <a href="{{path('post_show' , {'id': lastPost.id})}} " class="fs-1 mt-3 text-warning align-self-start">
             <i class="bi bi-arrow-right-square"></i>
         </a>
         </div>
