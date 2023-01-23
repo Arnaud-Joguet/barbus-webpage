@@ -19,9 +19,10 @@
                     <ul class="card-text player-ul" >
                         <li>Nom : {{player.name}}</li>
                         <li>Prénom : {{player.firstName}}</li>  
+                        <li>Poste : {{player.role}} </li>
                         <li>Coté de crosse : {{player.stickSide}}</li>
                     </ul>
-                    <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir le joueur</a>
+                    {# <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir le joueur</a> #}
                 </div>
             </div>
         </div>
