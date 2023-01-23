@@ -16,13 +16,19 @@
         <div class="card-body">
             <h5 class="card-title homePageLastPost-title"> {{lastPost.0.title}} </h5>
             <p class="card-text"> {{lastPost.0.summary}} </p>
+        <a href="{# {{ path('film_read', {'slug': movie.slug}) }} #}" class="fs-1 mt-3 text-secondary align-self-start">
+            <i class="bi bi-arrow-right-square"></i>
+        </a>
         </div>
     </div>
 
 </section>
 
 <div class="banner2" >
-    <img class="banner1_img" src="{{asset('assets/images/banniere1.jpg')}} " alt="photo équipe tournoi glace 2022" >
+    <img class="banner1_img" src="https://scontent-mrs2-2.xx.fbcdn.net/v/t1.6435-9/160279754_221921069721640_6906497543913099548_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=RaGsmWXD510AX9aGKxX&tn=VeMjLy8SmLCSjewi&_nc_ht=scontent-mrs2-2.xx&oh=00_AfCvdhSDh-K3CuDPDIr1I1BhjlpnRtBywAiidEkZwdl-iw&oe=63F5A3DB" alt="photo équipe tournoi 2019" >
 </div>
 
+<div id="maintenance" style="text-align: center; color: #87223C; padding: 10px; margin: 20px; border-radius: 10px; background-color: #F8D7DA; border: 1px solid #F5C2C7;">
+        <p style="margin-bottom: 0; font-weight: bold;">🚧 La boutique des barbu's est en cours de constsruction 🚧</p>
+    </div> 
 {% endblock %}
