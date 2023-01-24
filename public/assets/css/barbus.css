@@ -115,12 +115,25 @@ body {
 /* footer */
 
 .footer {
-    color: #fff;
+    display: flex;
+    background-color: #000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .footer__image {
     margin-left: 0.8rem;
     margin-right: 0.8rem;
     width: 4rem;
+}
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
+}
+.footer-link:hover {
+    color: #910B0B;
+    text-decoration: none;
 }
 
 /* media queries */
