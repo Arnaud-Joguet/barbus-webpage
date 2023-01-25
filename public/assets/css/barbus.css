@@ -136,6 +136,11 @@ body {
     text-decoration: none;
 }
 
+/* back-office*/
+.back-office {
+    background-color: #fff;
+}
+
 /* media queries */
 
 @media (max-width: 836px) {
