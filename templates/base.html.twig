@@ -86,11 +86,11 @@
                         </ul>
                     </div>
                     {% if is_granted('IS_AUTHENTICATED_FULLY')  %}
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav {# ms-auto mb-2 mb-lg-0 #}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown">
-                                <span>{# {{ app.user.email }} #} un email apparait</span>
+                                <span>{{ app.user.email }} </span>
 
                                 <i class="bi bi-person-square"></i>
                             </a>
