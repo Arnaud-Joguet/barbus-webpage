@@ -85,6 +85,42 @@
                             </li>
                         </ul>
                     </div>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY')  %}
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                <span>{# {{ app.user.email }} #} un email apparait</span>
+
+                                <i class="bi bi-person-square"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item text-muted" > 
+
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <span class="dropdown-item text-muted">Administrateur</span>
+                                        {% elseif is_granted('ROLE_USER') %}
+                                            <span class="dropdown-item text-muted">Utilisateur</span>
+                                        {% else %}
+                                            <span class="dropdown-item text-muted">Visiteur</span>
+                                        {% endif %}
+                                        
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profil</a></li>
+                                <li><a class="dropdown-item" href="{# {{ path('app_back_movie_index') }} #}">Backoffice</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{ path('logout') }}">Déconnexion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    {% endif %}
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a href="{{ path('logout') }}"><button type="button" class="btn btn-danger me-2">Deconnexion</button></a>
+                    {% else %}
+                    <a href="{{ path('login') }}"><button type="button" class="btn btn-danger me-2">Connexion</button></a>
+                    {% endif %}
                 </div>
             </nav>
         </header>
