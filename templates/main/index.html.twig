@@ -1,20 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{# {% block title %}Hello MainController!{% endblock %} #}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Barbus/barbus-webpage/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Barbus/barbus-webpage/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
-    </ul>
+<div class="banner1" >
+    <img class="banner1_img" src="{{asset('assets/images/banniere1.jpg')}} " alt="photo équipe tournoi glace 2022" >
 </div>
+
+<section class="hompage-firstSection">
+
+    <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
+    <h2 class="hompage-firstSection-subtitle">Dernières Actualitées :</h2>
+
+    <div class="card mb-3 homePageLastPost">
+        <img src="{{lastPost.firstPicture}}" class="card-img-top" alt="{{lastPost.title}} ">
+        <div class="card-body">
+            <h5 class="card-title homePageLastPost-title"> {{lastPost.title}} </h5>
+            <p class="card-text"> {{lastPost.summary}} </p>
+        <a href="{{path('post_show' , {'id': lastPost.id})}} " class="fs-1 mt-3 text-warning align-self-start">
+            <i class="bi bi-arrow-right-square"></i>
+        </a>
+        </div>
+    </div>
+
+</section>
+
+<div class="banner2" >
+    <img class="banner1_img" src="https://scontent-mrs2-2.xx.fbcdn.net/v/t1.6435-9/160279754_221921069721640_6906497543913099548_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=RaGsmWXD510AX9aGKxX&tn=VeMjLy8SmLCSjewi&_nc_ht=scontent-mrs2-2.xx&oh=00_AfCvdhSDh-K3CuDPDIr1I1BhjlpnRtBywAiidEkZwdl-iw&oe=63F5A3DB" alt="photo équipe tournoi 2019" >
+</div>
+
+<div id="maintenance" style="text-align: center; color: #87223C; padding: 10px; margin: 20px; border-radius: 10px; background-color: #F8D7DA; border: 1px solid #F5C2C7;">
+        <p style="margin-bottom: 0; font-weight: bold;">🚧 La boutique des barbu's est en cours de constsruction 🚧</p>
+    </div> 
 {% endblock %}

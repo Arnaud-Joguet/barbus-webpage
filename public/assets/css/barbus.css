@@ -1,0 +1,148 @@
+body {
+    background-color: #424242;
+}
+/* header */
+
+.header {
+    background-color: #dada37;
+}
+
+.header--title-a{
+    font-family: 'Rubik Dirt', cursive;
+    color: #000;
+    font-size: 6rem;
+    padding-left: 20%;
+    text-decoration: none;
+}
+.header--title-a:hover {
+    color: #910B0B;
+    text-decoration: none;
+}
+
+.logo__image {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: 6rem;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
+}
+.nav-link:hover {
+    color: #910B0B;
+    text-decoration: none;
+}
+ .nav-item {
+    padding-left: 1.5rem;
+ }
+
+.dropdown-item {
+    font-family: 'Iceland', cursive;
+}
+
+.navbar-toggler {
+    border-color: #000;
+    border-width: 2.5px;
+}
+
+/* Homepage */
+
+.banner1_img {
+    width: 100%;
+}
+
+.hompage-firstSection-title {
+    font-family: 'Iceland';
+    font-size: 8rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000;
+    margin: 2rem;
+}
+.hompage-firstSection-subtitle {
+    font-family: 'Iceland';
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.homePageLastPost {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Iceland';
+    border: 1.5px solid;
+}
+
+.homePageLastPost-title {
+    font-size: 3rem;
+}
+
+/* postList */
+.postList {
+    margin-top: 2rem;
+}
+.postList-card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* playerList*/
+.player-title {
+    font-family: 'Iceland';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.player-ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.player-ul li {
+    padding-left: 2rem;
+    background-image: url("../images/icons8-ice-hockey-60.png");
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    background-color: #000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.footer__image {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: 4rem;
+}
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
+}
+.footer-link:hover {
+    color: #910B0B;
+    text-decoration: none;
+}
+
+/* media queries */
+
+@media (max-width: 836px) {
+    .hompage-firstSection-title {
+        font-size: 3rem;
+    }
+    .header--title > a{
+        font-size: 3rem;
+    }
+}

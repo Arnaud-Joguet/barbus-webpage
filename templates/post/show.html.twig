@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team Barbu's, le blog{% endblock %}
+
+{% block body %}
+<section class="postShow">
+    {# <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1> #}
+    <h2 class="hompage-firstSection-subtitle"> {{post.title}} </h2>
+
+    <div class="card mb-3 postList-card" style="max-width: 75%;">
+    <img src=" {{post.firstPicture}} " class="card-img-top" alt="{{post.title}} ">
+        <div class="card-body">
+
+            <p class="card-text"> {{post.description}} </p>
+
+        </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -2,17 +2,25 @@
 
 namespace App\Controller;
 
+use App\Entity\Post;
+use App\Repository\PostRepository;
+use Doctrine\ORM\Mapping\PostPersist;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/main', name: 'app_main')]
-    public function index(): Response
+    #[Route('/', name: 'home')]
+    public function index(PostRepository $postRepository): Response
     {
+        
+        $postlist = $postRepository->findAll();
+        $lastPost = end($postlist);
+
+        //dump($lastPost);
         return $this->render('main/index.html.twig', [
-            'controller_name' => 'MainController',
+            'lastPost' => $lastPost,
         ]);
     }
 }
