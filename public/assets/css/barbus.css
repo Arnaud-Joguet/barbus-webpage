@@ -7,7 +7,7 @@ body {
     background-color: #dada37;
 }
 
-.header--title > a{
+.header--title-a{
     font-family: 'Rubik Dirt', cursive;
     color: #000;
     font-size: 6rem;
@@ -89,6 +89,51 @@ body {
 .postList-card {
     margin-left: auto;
     margin-right: auto;
+}
+
+/* playerList*/
+.player-title {
+    font-family: 'Iceland';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.player-ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.player-ul li {
+    padding-left: 2rem;
+    background-image: url("../images/icons8-ice-hockey-60.png");
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    background-color: #000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.footer__image {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: 4rem;
+}
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Iceland', cursive;
+}
+.footer-link:hover {
+    color: #910B0B;
+    text-decoration: none;
 }
 
 /* media queries */

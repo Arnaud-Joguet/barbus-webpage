@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team Barbu's, les joueurs{% endblock %}
+
+{% block body %}
+<section class="playerList ">
+    {# <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1> #}
+    <h2 class="hompage-firstSection-subtitle">Les Joueurs</h2>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 postList-card " style="max-width: 75%;">
+
+        {% for player in playerList %}
+        <div class="col" >
+            <div class="card">
+                <img src="{{player.picture }}" class="card-img-top" alt="{{player.name}} {{player.firstName}}">
+                <div class="card-body">
+                    <h5 class="card-title player-title">#{{player.jerseyNumber}} {{player.nickName}} </h5>
+                    <ul class="card-text player-ul" >
+                        <li>Nom : {{player.name}}</li>
+                        <li>Prénom : {{player.firstName}}</li>  
+                        <li>Poste : {{player.role}} </li>
+                        <li>Coté de crosse : {{player.stickSide}}</li>
+                    </ul>
+                    {# <a href=" {{path('post_show' , {'id': player.id})}} " class="btn btn-warning">Voir le joueur</a> #}
+                </div>
+            </div>
+        </div>
+        {% else %}
+        No player have been found.
+        {% endfor %} 
+    </div>
+
+
+</section>
+{% endblock %}
