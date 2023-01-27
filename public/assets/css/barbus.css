@@ -139,7 +139,9 @@ body {
 /* back-office*/
 .back-office {
     background-color: #fff;
+    padding-left: 5px;
 }
+
 
 /* media queries */
 
