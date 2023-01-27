@@ -29,6 +29,7 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $post->setCreatedAt(new \DateTimeImmutable('now'));
             $postRepository->save($post, true);
 
             return $this->redirectToRoute('app_back_post_index', [], Response::HTTP_SEE_OTHER);
@@ -55,6 +56,7 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $post->setUpdatedAt(new \DateTimeImmutable('now'));
             $postRepository->save($post, true);
 
             return $this->redirectToRoute('app_back_post_index', [], Response::HTTP_SEE_OTHER);

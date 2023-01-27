@@ -109,9 +109,9 @@
                         </ul>
                         {% endif %}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a href="{{ path('logout') }}"><button type="button" class="btn btn-danger me-2">Deconnexion</button></a>
+                        <a href="{{ path('logout') }}"><button type="button" class="btn btn-dark me-2">Deconnexion</button></a>
                         {% else %}
-                        <a href="{{ path('login') }}"><button type="button" class="btn btn-danger me-2">Connexion</button></a>
+                        <a href="{{ path('login') }}"><button type="button" class="btn btn-dark me-2">Connexion</button></a>
                         {% endif %}
                     </div>
                 </div>
