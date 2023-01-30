@@ -38,8 +38,6 @@ class PostType extends AbstractType
                 'label' => 'Image',
                 'help' => 'Url d\'une image'
             ])
-/*             ->add('createdAt')
-            ->add('updatedAt') */
         ;
     }
 
