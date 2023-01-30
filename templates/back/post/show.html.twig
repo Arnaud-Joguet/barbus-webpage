@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+    <div class="back-office">
+        <h1>Post</h1>
+        <a href="{{ path('app_back_post_index') }}" class="btn btn-warning">retour au menu</a>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ post.id }}</td>
+                </tr>
+                <tr>
+                    <th>Titre</th>
+                    <td>{{ post.title }}</td>
+                </tr>
+                <tr>
+                    <th>Résumé</th>
+                    <td>{{ post.summary }}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ post.description }}</td>
+                </tr>
+                <tr>
+                    <th>Imge à la une</th>
+                    <td>{{ post.firstPicture }}</td>
+                </tr>
+                <tr>
+                    <th>Image</th>
+                    <td>{{ post.picture }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_back_post_edit', {'id': post.id}) }}" class="btn btn-warning">modifier</a>
+
+        {{ include('back/post/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

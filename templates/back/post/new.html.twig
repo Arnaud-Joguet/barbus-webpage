@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="back-office">
+        <h1>Nouveau Post</h1>
+        <a href="{{ path('app_back_post_index') }}" class="btn btn-warning">retour au menu</a>
+        {{ include('back/post/_form.html.twig') }}
+    </div>
+
+{% endblock %}
