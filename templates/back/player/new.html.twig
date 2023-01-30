@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Player{% endblock %}
 
 {% block body %}
-    <h1>Create new Player</h1>
+    <div class="back-office">
+        <h1>Nouveau Joueur</h1>
+        <a href="{{ path('app_back_player_index') }}" class="btn btn-warning">retour au menu</a>
 
-    {{ include('back/player/_form.html.twig') }}
+        {{ include('back/player/_form.html.twig') }}
 
-    <a href="{{ path('app_back_player_index') }}">back to list</a>
+    </div>
 {% endblock %}

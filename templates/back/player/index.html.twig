@@ -1,51 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Player index{% endblock %}
-
 {% block body %}
-    <h1>Player index</h1>
+    <div class="back-office">
+        <h1>Gestion des Joueurs</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>FirstName</th>
-                <th>NickName</th>
-                <th>JerseyNumber</th>
-                <th>StickSide</th>
-                <th>Picture</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>Role</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for player in players %}
-            <tr>
-                <td>{{ player.id }}</td>
-                <td>{{ player.name }}</td>
-                <td>{{ player.firstName }}</td>
-                <td>{{ player.nickName }}</td>
-                <td>{{ player.jerseyNumber }}</td>
-                <td>{{ player.stickSide }}</td>
-                <td>{{ player.picture }}</td>
-                <td>{{ player.createdAt ? player.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ player.updatedAt ? player.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ player.role }}</td>
-                <td>
-                    <a href="{{ path('app_back_player_show', {'id': player.id}) }}">show</a>
-                    <a href="{{ path('app_back_player_edit', {'id': player.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="11">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <a href="{{ path('app_back_player_new') }}" class="btn btn-warning">Nouveau</a>
 
-    <a href="{{ path('app_back_player_new') }}">Create new</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Surnom</th>
+                    <th>N° Maillot</th>
+                    <th>Coté de crosse</th>
+                    <th>Photo</th>
+                    <th>Role</th>
+                    <th colspan="2" scope="col">actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for player in players %}
+                <tr>
+                    <td>{{ player.id }}</td>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.firstName }}</td>
+                    <td>{{ player.nickName }}</td>
+                    <td>{{ player.jerseyNumber }}</td>
+                    <td>{{ player.stickSide }}</td>
+                    <td>{{ player.picture }}</td>
+                    <td>{{ player.role }}</td>
+                     <td>
+                        <a href="{{ path('app_back_player_show', {'id': player.id}) }}" class="btn btn-warning">Voir</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('app_back_player_edit', {'id': player.id}) }}" class="btn btn-warning">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="11">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        
+    </div>
 {% endblock %}

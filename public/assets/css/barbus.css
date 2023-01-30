@@ -82,6 +82,10 @@ body {
     font-size: 3rem;
 }
 
+.homePageLastPost p {
+    font-size: 1.5rem;
+}
+
 /* postList */
 .postList {
     margin-top: 2rem;

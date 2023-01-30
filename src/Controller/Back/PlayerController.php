@@ -29,12 +29,13 @@ class PlayerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $player->setCreatedAt(new \DateTimeImmutable('now'));
             $playerRepository->save($player, true);
 
             return $this->redirectToRoute('app_back_player_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('back/player/new.html.twig', [
+        return $this->render('back/player/new.html.twig', [
             'player' => $player,
             'form' => $form,
         ]);
@@ -55,12 +56,13 @@ class PlayerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $player->setUpdatedAt(new \DateTimeImmutable('now'));
             $playerRepository->save($player, true);
 
             return $this->redirectToRoute('app_back_player_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('back/player/edit.html.twig', [
+        return $this->render('back/player/edit.html.twig', [
             'player' => $player,
             'form' => $form,
         ]);
