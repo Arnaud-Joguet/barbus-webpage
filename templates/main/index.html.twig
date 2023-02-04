@@ -5,13 +5,14 @@
 <div class="banner1" >
     <img class="banner1_img" src="{{asset('assets/images/banniere1.jpg')}} " alt="photo équipe tournoi glace 2022" >
 </div>
-
+<p> {{playerToShow.name}} </p>
+{{ dump(playerToShow)}}
 <section class="hompage-firstSection">
 
     <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1>
     <h2 class="hompage-firstSection-subtitle">Dernières Actualitées :</h2>
 
-    <div class="card mb-3 homePageLastPost">
+    <article class="card mb-3 homePageLastPost">
         <img src="{{lastPost.firstPicture}}" class="card-img-top" alt="{{lastPost.title}} ">
         <div class="card-body">
             <h5 class="card-title homePageLastPost-title"> {{lastPost.title}} </h5>
@@ -20,7 +21,7 @@
             <i class="bi bi-arrow-right-square"></i>
         </a>
         </div>
-    </div>
+    </article>
 
 </section>
 

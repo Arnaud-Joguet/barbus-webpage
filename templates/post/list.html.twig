@@ -4,11 +4,11 @@
 
 {% block body %}
 <section class="postList ">
-    {# <h1 class="hompage-firstSection-title">TEAM BARBU'S</h1> #}
+
     <h2 class="hompage-firstSection-subtitle">Toutes nos infos</h2>
 
     {% for post in postList|reverse %}
-    <div class="postList-card card mb-3" style="max-width: 75%;">
+    <article class="postList-card card mb-3" style="max-width: 75%;">
         <div class="row g-0">
             <div class="col-md-4">
             <img src="{{post.firstPicture }}" class="img-fluid rounded-start" alt="{{post.title}}">
@@ -21,7 +21,7 @@
             </div>
             </div>
         </div>
-    </div>
+    </article>
     {% else %}
     No post have been found.
     {% endfor %}
